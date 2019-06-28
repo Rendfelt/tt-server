@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Sender</title>
+    </head>
+    <body>
+
+        <script>
+            function Send()
+                {
+                    var xmlHttp = new XMLHttpRequest();
+                    xmlHttp.open( "POST", "http://localhost:9191/sender/send", true );
+                    xmlHttp.send( document.form.message.value );
+                }
+
+        </script>
+
+        <form name="form">
+            <input name="message"><br/>
+            <input type="button" value="Send" onClick="Send();">
+        </form>
+
+    </body>
+</html>
